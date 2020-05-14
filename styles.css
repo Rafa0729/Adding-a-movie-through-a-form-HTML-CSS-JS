@@ -1,0 +1,205 @@
+/* https://coolors.co/222222-ffffff-4b4e6d-84dcc6-95a3b3
+  font-family: 'Bangers', cursive;
+  font-family: 'Jost', sans-serif;
+  font-family: 'Cinzel', serif;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #222222;
+  font-family: 'Jost', sans-serif;
+  font-size: 100%;
+}
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 10px 0;
+  margin-right: 0.5em;
+  color: #4b4e6d;
+}
+h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 1.7rem;
+  margin-bottom: 1em;
+  letter-spacing: 3px;
+}
+.container {
+  width: 100%;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+.ocultar {
+  display: none;
+}
+/*---- HEADER ----*/
+header {
+  background-color: #ffffff;
+}
+/*---- FORMULARIO ----*/
+.formulario { /*---- We will need to modify the CSS properties with Javascript, such as top to 25% */
+  position: fixed;
+  top: calc(100% - 4em);
+  order: 2;
+  width: 100%;
+  background-color: rgb(149, 163, 179);
+  padding: 1em 0.5em 1.5em 0.5em;
+}
+.formulario h2 {
+  display: inline-block;
+  color: #222222;
+  font-size: 1.4rem;
+}
+.formulario i {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.formulario p {
+  text-transform: uppercase;
+  margin-bottom: 1.5%;
+  text-align: center;
+}
+input {
+  width: 80%;
+  min-width: 180px;
+  height: 35px;
+  padding-left: 1em;
+  text-transform: uppercase;
+  color: #4b4e6d;
+}
+input[id="director"], input[id="genero"],
+input[id="ano"] {
+  text-transform: capitalize;
+}
+button {
+  display: inline-block;
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  margin-top: 3%;
+  padding: 0.8em 0.9em;
+  color: #4b4e6d;
+}
+button:hover {
+  background-color: #4b4e6d;
+  color: #ffffff;
+  cursor: pointer;
+}
+/* TITLE FORM CONTENT */
+.form-title-content {
+  text-align: center;
+}
+/* INPUT FORM FLEX */
+.flex_form {
+  display: flex;
+  flex-direction: column;
+}
+.submit_btn {
+  align-self: center;
+}
+/*---- LISTADO ----*/
+.listado {
+  width: 100%;
+  padding: 2em 0.5em 1.5em 0.5em;
+}
+/*TITULO*/
+.listado h2{
+  padding-left: 1em;
+}
+.listado h2, .listado i {
+  display: inline-block;
+  color: #ffffff;
+}
+.listado i {
+  font-size: 2rem;
+}
+/*ITEMS*/
+.peliculas-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pelicula-item {
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  padding: 0.5em 0.2em;
+  margin-bottom: 2%;
+}
+.pelicula-item h3 {
+  font-family: 'Cinzel', serif;
+  color: #4b4e6d;
+  text-transform: uppercase;
+}
+.pelicula-item img {
+  width: 100%;
+  max-width: 250px;
+}
+.pelicula-item p {
+  text-transform: capitalize;
+}
+  /*---- DESKTOP APPROACH ----*/
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 125%;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: right;
+  }
+  .flex-container {
+    flex-direction: row;
+  }
+  /* --- FORMULARIO ----*/
+  .formulario {
+    position: static;
+    order: -1;
+    width: 30%;
+    padding-top: 2em;
+  }
+  .formulario h2 {
+    font-size: 1.7rem;
+  }
+  .formulario i {
+    display: none;
+  }
+  .form-title-content {
+    text-align: center;
+  }
+  button {
+    margin-top: 1.5em;
+  }
+  /* LISTADO */
+  .peliculas-list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .pelicula-item {
+    width: 30%;
+  }
+}
+/*--- MEDIA QUERIES FORM ----*/
+@media screen and (min-width: 425px) and (max-width: 699px) {
+  .flex_inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 100%;
+  }
+  .peliculas-list {
+    justify-content: space-around;
+  }
+  .pelicula-item {
+    width: 45%;
+    min-width: 170px;
+  }
+}

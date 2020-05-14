@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rafael Gallego">
+    <meta name="description" content="Página web para añadir peliculas a traves de formularios">
+    <meta name="keywords" content="form, localStorage">
+    <title>Añadiendo peliculas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="addingAMovie.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel:wght@400;700&family=Jost&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/98514e6d67.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>FORMULARIO PARA AÑADIR PELÍCULAS</h1>
+      </div>
+    </header>
+    <main class="container flex-container">
+        <section class="formulario">
+          <div class="form-title-content">
+              <h2 class="title_formulario">AÑADAMOS UNA PELÍCULA</h2>
+              <i class="fas fa-angle-up" id="upArrow"></i> <!-- Flecha arriba (Añadir css display to none through JS)-->
+              <i class="fas fa-angle-down" id="downArrow"></i> <!--  style="display: none;"  Flecha abajo -->
+          </div>
+          <form action="#" autocomplete="off">
+            <div class="flex_form">
+              <div class="flex_inputs">
+                  <p><label for="titulo">Título <br><input id="titulo" type="text" required></label></p>
+                  <p><label for="director">Director <br><input id="director" type="text" required></label></p>
+                  <p><label for="genero">Género <br><input id="genero" type="text" required></label></p>
+                  <p><label for=ano"">Año <br><input id="ano" type="text" required></label></p>
+              </div>
+              <div class="submit_btn">
+                  <button type="submit">Añadir Película</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section class="listado">
+              <div class="">
+                  <h2>Listado </h2>
+                  <i class="fas fa-film"></i>
+              </div>
+
+              <div class="peliculas-list">
+                <!-- THIS IS THE SPACE WHERE ALL THE ITEM ELEMENTS GO -->
+              </div>
+        </section>
+    </main>
+
+      <!-- <img src="https://picsum.photos/200/300"> -->
+  </body>
+</html>
